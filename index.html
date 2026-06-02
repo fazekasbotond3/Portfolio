@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Photographer Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header id="hero" class="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <div class="hero-mosaic">
+          <div class="mosaic-card mosaic-card-lg">
+            <div class="hero-copy">
+              <span class="hero-label">Canon 90D</span>
+              <h1 id="site-title" class="title">The Wild Parachute</h1>
+              <p id="site-subtitle" class="subtitle">A photo by Christian Carter in 2024</p>
+              <a class="cta" href="#galleries">Galéria</a>
+            </div>
+          </div>
+          <div class="mosaic-card mosaic-card-sm mosaic-card-1"></div>
+          <div class="mosaic-card mosaic-card-sm mosaic-card-2"></div>
+          <div class="mosaic-card mosaic-card-sm mosaic-card-3"></div>
+        </div>
+      </div>
+    </header>
+
+<nav class="side-nav" aria-label="Primary">
+
+  <div class="nav-top">
+    <div class="brand">FB</div>
+
+    <button class="hamburger" id="hamburgerBtn">
+      ☰
+    </button>
+  </div>
+
+  <div class="side-links" id="menu">
+    <a href="#about">Rólam</a>
+    <a href="#galleries">Galéria</a>
+    <a href="#contact">Kapcsolat</a>
+  </div>
+
+</nav>
+
+    <main class="container">
+      <section id="about" class="about">
+        <div class="about-inner">
+          <h2>Rólam</h2>
+          <p id="about-text" class="about-text">Hi — I'm a photographer. Paste your images into the <strong>images</strong> folders and run the build script to generate the gallery. Keep this intro short and friendly.</p>
+        </div>
+      </section>
+
+
+      <section id="galleries">
+        <h2>Galéria</h2>
+        <div id="gallery-root"></div>
+      </section>
+      <section id="contact" class="contact">
+        <div class="contact-inner">
+          <h2>Kapcsolat</h2>
+          <div class="contact-list">
+            <a class="contact-link" href="tel:+36301234567">
+              <span class="contact-icon" aria-hidden="true">📞</span>
+              <span class="sr-only">Telefon:</span>
+              <span>+36 20 263 9382</span>
+            </a>
+            <a class="contact-link" href="mailto:hello@example.com">
+              <span class="contact-icon" aria-hidden="true">✉️</span>
+              <span class="sr-only">Email:</span>
+              <span>fazekboti@gmail.com</span>
+            </a>
+            <a class="contact-link" href="https://instagram.com/yourhandle" target="_blank" rel="noopener">
+              <span class="contact-icon" aria-hidden="true">📷</span>
+              <span class="sr-only">Instagram:</span>
+              <span>@botifazekas</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <button class="close" aria-label="Close">×</button>
+      <button class="prev" aria-label="Previous">‹</button>
+      <img class="lightbox-img" src="" alt="" />
+      <button class="next" aria-label="Next">›</button>
+    </div>
+
+    <div id="category-modal" class="category-modal" aria-hidden="true">
+      <div class="category-modal-panel">
+        <div class="category-modal-header">
+          <h3 id="category-modal-title">Galéria</h3>
+          <button id="category-modal-close" class="close-modal" aria-label="Close">×</button>
+        </div>
+        <div id="category-modal-grid" class="category-modal-grid"></div>
+      </div>
+    </div>
+
+    <button id="scrollTopBtn" class="scroll-top" aria-label="Vissza a tetejére">↑</button>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

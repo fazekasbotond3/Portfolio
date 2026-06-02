@@ -1,0 +1,15 @@
+{
+  "name": "photographer-portfolio",
+  "version": "1.0.0",
+  "description": "Minimal photographer portfolio - drop images into folders and run build",
+  "scripts": {
+    "build": "node scripts/process-images.js && node scripts/generate-galleries.js",
+    "process-images": "node scripts/process-images.js",
+    "start": "npx serve . -l 5000"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "sharp": "^0.32.0"
+  }
+}

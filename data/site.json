@@ -2,12 +2,12 @@
   "title": "Fazekas Botond",
   "subtitle": "Sport és Természetfotózás",
   "about": "20 éves hobbifotós vagyok, és a jövőbeli tervem, hogy munka szinten tudjak foglalkozni a fotózással. A sport és természetfotózás jelenleg az a két terület amely a legjobban megfog és amiben a legnagyobb gyakorlatom is van, azonban érdekel ezek mellett az esküvő és egyéb eseményfotózás is.",
-  "heroImage": "/images/nature/IMG_8351.jpg",
+  "heroImage": "images/nature/IMG_8351.jpg",
   "heroSlides": [
-    "/images/nature/IMG_8351.jpg",
-    "/images/nature/IMG_8358.jpg",
-    "/images/nature/IMG_8351.JPG",
-    "/images/nature/IMG_8356.JPG",
-    "/images/nature/IMG_8359.JPG"
+    "images/nature/IMG_8351.jpg",
+    "images/nature/IMG_8358.jpg",
+    "images/nature/IMG_8351.JPG",
+    "images/nature/IMG_8356.JPG",
+    "images/nature/IMG_8359.JPG"
   ]
 }

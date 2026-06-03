@@ -1,3 +1,8 @@
+function normalizePath(src) {
+  if (!src || typeof src !== 'string') return src;
+  return src.startsWith('/') ? src.slice(1) : src;
+}
+
 async function loadSiteData() {
   try {
     const res = await fetch('data/site.json');
@@ -14,13 +19,13 @@ async function loadSiteData() {
     const heroCard1 = document.querySelector('.mosaic-card-1');
     const heroCard2 = document.querySelector('.mosaic-card-2');
     const heroCard3 = document.querySelector('.mosaic-card-3');
-    const heroSlides = Array.isArray(data.heroSlides) ? data.heroSlides : [];
-    const heroBackground = data.heroImage || heroSlides[0];
-    const heroMainImage = heroSlides[1] || heroBackground;
+    const heroSlides = Array.isArray(data.heroSlides) ? data.heroSlides.map(normalizePath) : [];
+    const heroBackground = normalizePath(data.heroImage || heroSlides[0]);
+    const heroMainImage = normalizePath(heroSlides[1] || heroBackground);
     if (hero && heroBackground) hero.style.setProperty('--hero-img', `url('${heroBackground}')`);
     if (heroCardMain && heroMainImage) heroCardMain.style.backgroundImage = `url('${heroMainImage}')`;
     [heroCard1, heroCard2, heroCard3].forEach((card, index) => {
-      const src = heroSlides[index + 2] || heroBackground;
+      const src = normalizePath(heroSlides[index + 2] || heroBackground);
       if (card && src) card.style.backgroundImage = `url('${src}')`;
     });
   } catch (e) {
